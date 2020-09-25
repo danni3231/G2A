@@ -1,0 +1,37 @@
+// @font-face{
+//     font-family: 'goodTimes';
+//     src: url("../data/fonts/goodTimes.ttf");
+// }
+
+@import url("https://db.onlinewebfonts.com/c/b76dfab2577d26b9cfdeebe6655aa14f?family=Good+Times");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+// colors
+$bgColor1: #0A0A0A;
+$bgColor2: rgba(0, 0, 0, 0.7);
+$primaryColor: #0084C1;
+$secondaryColor:#F05F00;
+$white: #ffffff;
+
+// fonts
+$goodTimes: "Good Times";
+$montserrat: 'Montserrat', sans-serif;
+
+body{
+    background-color: $bgColor1;
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+    img{
+        height: 30px;
+        margin: 20px 10px;
+    }
+}
+
+@import 'reset';
+@import 'btn';
+@import 'header';
+@import 'content';
+@import 'footer';

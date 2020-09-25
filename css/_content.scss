@@ -1,0 +1,65 @@
+main{
+    display: flex;
+    flex-direction: column;
+
+    .info{
+        height: 75vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $white;
+        padding: 140px 250px;
+    
+        section{
+            width: 600px;
+            text-align: center;
+    
+            h1{
+                font-family: "Good Times";
+                font-size: 40px;
+                margin: 20px 0px;
+            }
+    
+            hr{
+                width: 400px;
+                border: 3px solid $primaryColor;
+            }
+    
+            p{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+                font-size: 20px;
+                margin: 20px 0px;
+            }
+        }
+    
+        section:nth-child(2n){
+            align-self: flex-end;
+            hr{
+                border: 3px solid $secondaryColor;
+            }
+        }
+    }
+    
+    .newsletter{
+        width: 1180px;
+        color: #FFFFFF;
+        display: flex;
+        align-self: center;
+    
+        h1{
+            font-family: $goodTimes;
+            font-size: 64px;
+            line-height: 77px;
+        }
+        
+        h2{
+            width: 330px;
+            font-family: $goodTimes;
+            font-size: 30px;
+            line-height: 36px;
+            
+        }
+    }
+
+}
