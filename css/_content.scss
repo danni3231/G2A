@@ -42,24 +42,54 @@ main{
     }
     
     .newsletter{
-        width: 1180px;
+        width: 1300px;
+        padding: 400px 0px;
         color: #FFFFFF;
-        display: flex;
         align-self: center;
     
         h1{
             font-family: $goodTimes;
+            text-align: center;
             font-size: 64px;
-            line-height: 77px;
+            line-height: 72px;
         }
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            h2{
+                width: 330px;
+                font-family: $goodTimes;
+                font-size: 30px;
+                line-height: 36px;
+                
+            }
         
-        h2{
-            width: 330px;
-            font-family: $goodTimes;
-            font-size: 30px;
-            line-height: 36px;
-            
+            .input{
+                width: 70%;
+                background-color: $bgColor1;
+                border: 2px solid $white;
+                padding: 10px;
+    
+                input{
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 15px 20px;
+                    background-color: $bgColor1;
+                    color: $white;
+        
+                    border: 2px solid $white;
+                    font-family: $goodTimes;
+                    font-size: 15px;
+                }
+            }
         }
+
+        
+        
+
     }
 
 }

@@ -570,7 +570,8 @@ main .info section:nth-child(2n) hr {
 }
 
 main .newsletter {
-  width: 1180px;
+  width: 1300px;
+  padding: 400px 0px;
   color: #FFFFFF;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -579,15 +580,49 @@ main .newsletter {
 
 main .newsletter h1 {
   font-family: "Good Times";
+  text-align: center;
   font-size: 64px;
-  line-height: 77px;
+  line-height: 72px;
 }
 
-main .newsletter h2 {
+main .newsletter div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .newsletter div h2 {
   width: 330px;
   font-family: "Good Times";
   font-size: 30px;
   line-height: 36px;
+}
+
+main .newsletter div .input {
+  width: 70%;
+  background-color: #0A0A0A;
+  border: 2px solid #ffffff;
+  padding: 10px;
+}
+
+main .newsletter div .input input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px 20px;
+  background-color: #0A0A0A;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-family: "Good Times";
+  font-size: 15px;
 }
 
 .footer {
