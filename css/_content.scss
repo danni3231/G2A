@@ -40,6 +40,28 @@ main{
             }
         }
     }
+
+    .carrousel{
+        color: #FFFFFF;
+        padding: 400px 0px;
+        overflow: hidden;
+
+        h1{ 
+            font-family: $goodTimes;
+            text-align: center;
+            font-size: 64px;
+            line-height: 72px;
+        }
+
+        &__stripe{
+            display: flex;
+            justify-content: center;
+            transition: transform .6s ease;
+            img{
+                margin: 100px;
+            }
+        }
+    }
     
     .newsletter{
         width: 1300px;
@@ -86,10 +108,5 @@ main{
                 }
             }
         }
-
-        
-        
-
     }
-
 }

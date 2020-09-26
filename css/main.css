@@ -569,6 +569,36 @@ main .info section:nth-child(2n) hr {
   border: 3px solid #F05F00;
 }
 
+main .carrousel {
+  color: #FFFFFF;
+  padding: 400px 0px;
+  overflow: hidden;
+}
+
+main .carrousel h1 {
+  font-family: "Good Times";
+  text-align: center;
+  font-size: 64px;
+  line-height: 72px;
+}
+
+main .carrousel__stripe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-transform .6s ease;
+  transition: -webkit-transform .6s ease;
+  transition: transform .6s ease;
+  transition: transform .6s ease, -webkit-transform .6s ease;
+}
+
+main .carrousel__stripe img {
+  margin: 100px;
+}
+
 main .newsletter {
   width: 1300px;
   padding: 400px 0px;
