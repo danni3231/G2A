@@ -1,4 +1,23 @@
 main{
+
+    color: $white;
+
+    h1{
+        margin: 40px 0px;
+        font-family: $goodTimes;
+        text-align: center;
+        font-size: 64px;
+        line-height: 72px;
+    }
+
+    h2{
+        margin: 20px 0px;
+        font-family: $goodTimes;
+        text-align: center;
+        font-size: 45px;
+        line-height: 72px;
+    }
+
     display: flex;
     flex-direction: column;
 
@@ -7,7 +26,6 @@ main{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        color: $white;
         padding: 140px 250px;
     
         section{
@@ -42,23 +60,35 @@ main{
     }
 
     .carrousel{
-        color: #FFFFFF;
-        padding: 400px 0px;
+        padding: 200px 0px;
         overflow: hidden;
-
-        h1{ 
-            font-family: $goodTimes;
-            text-align: center;
-            font-size: 64px;
-            line-height: 72px;
-        }
 
         &__stripe{
             display: flex;
-            justify-content: center;
+            //justify-content: center;
             transition: transform .6s ease;
             img{
                 margin: 100px;
+            }
+        }
+    }
+
+    .promo{
+        h1{
+            margin-bottom: 0px;
+        }
+        h2{
+            margin-top: 0px;
+        }
+
+        .logos--button{
+            :focus{
+                height: 40px;
+                outline: none;
+            }
+
+            &-focus{
+                height: 40px;
             }
         }
     }
@@ -66,15 +96,8 @@ main{
     .newsletter{
         width: 1300px;
         padding: 400px 0px;
-        color: #FFFFFF;
         align-self: center;
     
-        h1{
-            font-family: $goodTimes;
-            text-align: center;
-            font-size: 64px;
-            line-height: 72px;
-        }
         div{
             display: flex;
             flex-wrap: wrap;

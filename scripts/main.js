@@ -14,13 +14,7 @@ function handleNextSlide () {
     if(current >= carrouselStripe.children.length) {
         current = 0;
       }
-
-  
-/*
-  if(current >= carrouselStripe.children.length) {
-    current = 0;
-  }
- */
 }
 
-//setInterval(handleNextSlide, 1000);
+setInterval(handleNextSlide, 1000);
+

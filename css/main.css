@@ -18,6 +18,11 @@ body {
   margin: 20px 10px;
 }
 
+.logos input {
+  height: 30px;
+  margin: 20px 10px;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -512,6 +517,7 @@ header .banner__text p {
 }
 
 main {
+  color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,6 +525,22 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+main h1 {
+  margin: 40px 0px;
+  font-family: "Good Times";
+  text-align: center;
+  font-size: 64px;
+  line-height: 72px;
+}
+
+main h2 {
+  margin: 20px 0px;
+  font-family: "Good Times";
+  text-align: center;
+  font-size: 45px;
+  line-height: 72px;
 }
 
 main .info {
@@ -533,7 +555,6 @@ main .info {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #ffffff;
   padding: 140px 250px;
 }
 
@@ -570,25 +591,14 @@ main .info section:nth-child(2n) hr {
 }
 
 main .carrousel {
-  color: #FFFFFF;
-  padding: 400px 0px;
+  padding: 200px 0px;
   overflow: hidden;
-}
-
-main .carrousel h1 {
-  font-family: "Good Times";
-  text-align: center;
-  font-size: 64px;
-  line-height: 72px;
 }
 
 main .carrousel__stripe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-transition: -webkit-transform .6s ease;
   transition: -webkit-transform .6s ease;
   transition: transform .6s ease;
@@ -599,20 +609,29 @@ main .carrousel__stripe img {
   margin: 100px;
 }
 
+main .promo h1 {
+  margin-bottom: 0px;
+}
+
+main .promo h2 {
+  margin-top: 0px;
+}
+
+main .promo .logos--button :focus {
+  height: 40px;
+  outline: none;
+}
+
+main .promo .logos--button-focus {
+  height: 40px;
+}
+
 main .newsletter {
   width: 1300px;
   padding: 400px 0px;
-  color: #FFFFFF;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-main .newsletter h1 {
-  font-family: "Good Times";
-  text-align: center;
-  font-size: 64px;
-  line-height: 72px;
 }
 
 main .newsletter div {
