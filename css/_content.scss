@@ -74,9 +74,11 @@ main{
     }
 
     .promo{
+
         h1{
             margin-bottom: 0px;
         }
+        
         h2{
             margin-top: 0px;
         }
@@ -89,6 +91,70 @@ main{
 
             &-focus{
                 height: 40px;
+            }
+        }
+
+        &__content{
+            display: flex;
+            justify-content: space-around;
+            padding: 100px 0px;
+        }
+
+        &__card{
+            width: 510px;
+            height: 410px;
+            border: 3px solid $white;
+            padding: 15px;
+            display: flex;
+
+            &--border{
+                width: 100%;
+                padding: 15px;
+                border: 3px solid $white;
+            }
+        }
+
+        &__info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            
+            h1{
+                margin: 0px;
+                font-family: $goodTimes;
+                font-size: 36px;
+            }
+        }
+
+        &__price{
+            width: 100%;
+            margin: 25px 0px;
+            display: flex;
+            justify-content: space-around;
+
+            p{
+                font-family: $montserrat;
+                font-weight: bold;
+                font-size: 25px;
+                margin: 0px;
+            }
+
+            s{
+                font-family: $montserrat;
+                font-weight: normal;
+                font-size: 15px;
+                margin: 0px;
+            }
+
+            &--percentage{
+                width: 130px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                color: $bgColor1;
             }
         }
     }

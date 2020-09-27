@@ -1,16 +1,17 @@
-@mixin btnModifier($bg,$color) {
+@mixin btnModifier($bg,$color,$size,$padding) {
+    display: flex;
     background-color: $bg;
     border: 2px solid $color;
+    padding: $padding;
 
     button{
-        padding: 15px 20px;
-        margin: 10px;
+        padding: $padding;
         background-color: $bg;
         color: $color;
 
         border: 2px solid $color;
         font-family: $goodTimes;
-        font-size: 28px;
+        font-size: $size;
     }
 
     &:hover {
@@ -21,5 +22,13 @@
 }
 
 .btn{
-    @include btnModifier($bgColor1,$white);
+    @include btnModifier($bgColor1,$white,28px,15px);
+
+    &--promo{
+        @include btnModifier($bgColor1,$white,15px,5px);
+
+        button{
+            padding: 5px, 10px;
+        }
+    }
 }
