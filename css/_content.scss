@@ -83,13 +83,13 @@ main{
             margin-top: 0px;
         }
 
-        .logos--button{
+        .logos__button{
             :focus{
                 height: 40px;
                 outline: none;
             }
 
-            &-focus{
+            &--focus{
                 height: 40px;
             }
         }
@@ -98,6 +98,10 @@ main{
             display: flex;
             justify-content: space-around;
             padding: 100px 0px;
+
+            &--hidden{
+                display: none;
+            }
         }
 
         &__card{

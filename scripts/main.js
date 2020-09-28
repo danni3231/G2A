@@ -4,7 +4,6 @@ let current = 0;
 
 
 function handleNextSlide () {
-    console.log(current)
     if(current < carrouselStripe.children.length){
         const width = carrouselStripe.children.item(current).clientWidth;
         carrouselStripe.style.transform = 'translate(-' + (width * current) + 'px, 0px)';
@@ -16,19 +15,36 @@ function handleNextSlide () {
       }
 }
 
-const listInput = document.querySelectorAll('.logos--button input');
+setInterval(handleNextSlide, 1000);
+
+const listInput = document.querySelectorAll('.logos__button input');
+const listCards =document.querySelectorAll('.promo__content');
 
 function logosInputHandle (event) {
+
   listInput.forEach(element => {
-    element.classList.remove('logos--button-focus');
+    element.classList.remove('logos__button--focus');
   });
-  event.target.classList.add('logos--button-focus');
-  console.log(event);
+
+  event.target.classList.add('logos__button--focus');
+
+  let inputIndex = event.target.getAttribute("data-index");
+
+  listCards.forEach(function (elem, index){
+    if(index == inputIndex){
+      console.log(inputIndex);
+      elem.classList.remove('promo__content--hidden');
+    }else{
+      elem.classList.add('promo__content--hidden');
+    }
+
+  });
+  console.log(listInput);
 }
 
 listInput.forEach(function (elem, index) {
   elem.addEventListener('click', logosInputHandle);
 });
 
-setInterval(handleNextSlide, 1000);
+
 

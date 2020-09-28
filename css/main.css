@@ -649,12 +649,12 @@ main .promo h2 {
   margin-top: 0px;
 }
 
-main .promo .logos--button :focus {
+main .promo .logos__button :focus {
   height: 40px;
   outline: none;
 }
 
-main .promo .logos--button-focus {
+main .promo .logos__button--focus {
   height: 40px;
 }
 
@@ -665,6 +665,10 @@ main .promo__content {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 100px 0px;
+}
+
+main .promo__content--hidden {
+  display: none;
 }
 
 main .promo__card {
