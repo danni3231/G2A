@@ -125,15 +125,16 @@ main{
             justify-content: space-between;
             
             h1{
+                height: 60px;
                 margin: 0px;
                 font-family: $goodTimes;
-                font-size: 36px;
+                font-size: 28px;
             }
         }
 
         &__price{
             width: 100%;
-            margin: 25px 0px;
+            margin: 30px 0px;
             display: flex;
             justify-content: space-around;
 
