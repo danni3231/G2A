@@ -1,18 +1,20 @@
 const carrousel = document.querySelector('.carrousel');
 const carrouselStripe = document.querySelector('.carrousel__stripe');
+
 let current = 0;
 
-
 function handleNextSlide () {
-    if(current < carrouselStripe.children.length){
-        const width = carrouselStripe.children.item(current).clientWidth;
+
+    if(current < carrouselStripe.children.length-1){
+        const width = carrouselStripe.children.item(current).clientWidth-100;
         carrouselStripe.style.transform = 'translate(-' + (width * current) + 'px, 0px)';
         current++;
     }
-
-    if(current >= carrouselStripe.children.length) {
+    
+    if(current >= carrouselStripe.children.length-1) {
         current = 0;
-      }
+    }
+
 }
 
 setInterval(handleNextSlide, 1000);
