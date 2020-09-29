@@ -241,5 +241,17 @@ main{
             }
         }
 
+        .carrousel{
+            width: 414px;
+            padding: 80px 0px;
+            overflow: hidden;
+
+            &__stripe{
+                img{
+                    width: 230px;
+                    margin: 50px 92px;
+                }
+            }
+        }
     }
 }

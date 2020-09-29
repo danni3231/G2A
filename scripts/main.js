@@ -1,19 +1,40 @@
 const carrousel = document.querySelector('.carrousel');
 const carrouselStripe = document.querySelector('.carrousel__stripe');
 
+let carrouselWidth = carrousel.clientWidth;
+
 let current = 0;
 
 function handleNextSlide () {
+  let carrouselWidth = carrousel.clientWidth;
+
+  if(carrouselWidth <= 414 ){
+
+    if(current < carrouselStripe.children.length){
+      const width = carrouselStripe.children.item(current).clientWidth+184;
+      console.log(carrouselWidth);
+      carrouselStripe.style.transform = 'translate(-' + (width * current) + 'px, 0px)';
+      current++;
+    }else{
+      current = 0;
+    }
+
+  }else{
 
     if(current < carrouselStripe.children.length-1){
-        const width = carrouselStripe.children.item(current).clientWidth-100;
-        carrouselStripe.style.transform = 'translate(-' + (width * current) + 'px, 0px)';
-        current++;
+      const width = carrouselStripe.children.item(current).clientWidth-100;
+      console.log(carrouselWidth);
+      carrouselStripe.style.transform = 'translate(-' + (width * current) + 'px, 0px)';
+      current++;
+    }else{
+      current = 0;
     }
-    
-    if(current >= carrouselStripe.children.length-1) {
-        current = 0;
-    }
+
+  }
+
+
+
+
 
 }
 
