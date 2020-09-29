@@ -971,6 +971,34 @@ main .newsletter div .input input {
     width: 80px;
     height: 30px;
   }
+  main .newsletter {
+    width: 300px;
+    padding: 80px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .newsletter h1 {
+    width: 250px;
+  }
+  main .newsletter div .input {
+    width: 100%;
+    padding: 5px;
+  }
+  main .newsletter div .input input {
+    padding: 8px;
+    font-size: 10px;
+  }
+  main .newsletter div .input input :focus {
+    outline: none;
+  }
 }
 
 .footer {
