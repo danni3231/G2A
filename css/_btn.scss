@@ -31,6 +31,10 @@
 
 @media screen and (max-width: 414px) {
     .btn{
-        @include btnModifier($bgColor1,$white,18px,5px)
+        @include btnModifier($bgColor1,$white,18px,5px);
+
+        &--promo{
+            @include btnModifier($bgColor1,$white,10px,3px);
+        }
     }
 }

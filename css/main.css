@@ -13,6 +13,15 @@ body {
           justify-content: center;
 }
 
+.logos__button :focus {
+  height: 40px;
+  outline: none;
+}
+
+.logos__button--focus {
+  height: 40px;
+}
+
 .logos img {
   height: 30px;
   margin: 20px 10px;
@@ -24,9 +33,19 @@ body {
 }
 
 @media screen and (max-width: 414px) {
+  .logos__button :focus {
+    height: 35px;
+  }
+  .logos__button--focus {
+    height: 35px;
+  }
   .logos img {
     height: 20px;
     margin: 10px 5px;
+  }
+  .logos input {
+    height: 25px;
+    margin: 10px 10px;
   }
 }
 
@@ -449,6 +468,28 @@ template {
     -webkit-transform: translateY(-0.25em);
             transform: translateY(-0.25em);
   }
+  .btn--promo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #0A0A0A;
+    border: 2px solid #ffffff;
+    padding: 3px;
+  }
+  .btn--promo button {
+    padding: 3px;
+    background-color: #0A0A0A;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-family: "Good Times";
+    font-size: 10px;
+  }
+  .btn--promo:hover {
+    -webkit-box-shadow: 0 0.5em 0.5em -0.4em #ffffff;
+            box-shadow: 0 0.5em 0.5em -0.4em #ffffff;
+    -webkit-transform: translateY(-0.25em);
+            transform: translateY(-0.25em);
+  }
 }
 
 header {
@@ -704,15 +745,6 @@ main .promo h2 {
   margin-top: 0px;
 }
 
-main .promo .logos__button :focus {
-  height: 40px;
-  outline: none;
-}
-
-main .promo .logos__button--focus {
-  height: 40px;
-}
-
 main .promo__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,6 +770,8 @@ main .promo__card {
 
 main .promo__card--border {
   width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 15px;
   border: 3px solid #ffffff;
 }
@@ -759,10 +793,10 @@ main .promo__info {
 }
 
 main .promo__info h1 {
-  height: 60px;
   margin: 0px;
   font-family: "Good Times";
   font-size: 28px;
+  line-height: 60px;
 }
 
 main .promo__price {
@@ -896,6 +930,46 @@ main .newsletter div .input input {
   main .carrousel__stripe img {
     width: 230px;
     margin: 50px 92px;
+  }
+  main .promo__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 600px;
+    padding: 40px 0px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .promo__card {
+    width: 250px;
+    height: 230px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+  }
+  main .promo__card img {
+    width: 100%;
+  }
+  main .promo__card--border {
+    height: 100%;
+    border: 2px solid #ffffff;
+  }
+  main .promo__info h1 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  main .promo__price {
+    margin: 20px 0px;
+  }
+  main .promo__price p {
+    font-size: 14px;
+  }
+  main .promo__price s {
+    font-size: 10px;
+  }
+  main .promo__price--percentage {
+    width: 80px;
+    height: 30px;
   }
 }
 

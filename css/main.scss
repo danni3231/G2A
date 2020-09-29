@@ -24,6 +24,18 @@ body{
 .logos{
     display: flex;
     justify-content: center;
+
+    &__button{
+        :focus{
+            height: 40px;
+            outline: none;
+        }
+
+        &--focus{
+            height: 40px;
+        }
+    }
+    
     img{
         height: 30px;
         margin: 20px 10px;
@@ -37,9 +49,25 @@ body{
 
 @media screen and (max-width: 414px) {
     .logos{
+
+        &__button{
+
+            :focus{
+                height: 35px;
+            }
+    
+            &--focus{
+                height: 35px;
+            }
+        }
+
         img{
             height: 20px;
             margin: 10px 5px;
+        }
+        input{
+            height: 25px;
+            margin: 10px 10px;
         }
     }
 }

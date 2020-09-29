@@ -76,17 +76,6 @@ main{
             margin-top: 0px;
         }
 
-        .logos__button{
-            :focus{
-                height: 40px;
-                outline: none;
-            }
-
-            &--focus{
-                height: 40px;
-            }
-        }
-
         &__content{
             display: flex;
             justify-content: space-around;
@@ -106,6 +95,7 @@ main{
 
             &--border{
                 width: 100%;
+                box-sizing: border-box;
                 padding: 15px;
                 border: 3px solid $white;
             }
@@ -118,10 +108,10 @@ main{
             justify-content: space-between;
             
             h1{
-                height: 60px;
                 margin: 0px;
                 font-family: $goodTimes;
                 font-size: 28px;
+                line-height: 60px;
             }
         }
 
@@ -250,6 +240,54 @@ main{
                 img{
                     width: 230px;
                     margin: 50px 92px;
+                }
+            }
+        }
+
+        .promo{
+            &__content{
+                flex-direction: column;
+                height: 600px;
+                padding: 40px 0px;
+                justify-content:  space-around;
+            }
+
+            &__card{
+                width: 250px;
+                height: 230px;
+                border: 2px solid $white;
+                padding: 10px;
+
+                img{
+                    width: 100%;
+                }
+
+                &--border{
+                    height: 100%;
+                    border: 2px solid $white;
+                }
+            }
+
+            &__info{
+                h1{
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+
+            &__price{
+                margin: 20px 0px;
+                p{
+                    font-size: 14px;
+                }
+                s{
+                    font-size: 10px;
+                }
+
+                &--percentage{
+                    width: 80px;
+                    height: 30px;
+
                 }
             }
         }
