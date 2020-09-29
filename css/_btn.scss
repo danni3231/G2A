@@ -26,9 +26,11 @@
 
     &--promo{
         @include btnModifier($bgColor1,$white,15px,5px);
+    }
+}
 
-        button{
-            padding: 5px, 10px;
-        }
+@media screen and (max-width: 414px) {
+    .btn{
+        @include btnModifier($bgColor1,$white,18px,5px)
     }
 }

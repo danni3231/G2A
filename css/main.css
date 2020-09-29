@@ -23,6 +23,13 @@ body {
   margin: 20px 10px;
 }
 
+@media screen and (max-width: 414px) {
+  .logos img {
+    height: 20px;
+    margin: 10px 5px;
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -419,14 +426,36 @@ template {
           transform: translateY(-0.25em);
 }
 
-.btn--promo button {
-  padding: 5px, 10px;
+@media screen and (max-width: 414px) {
+  .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #0A0A0A;
+    border: 2px solid #ffffff;
+    padding: 5px;
+  }
+  .btn button {
+    padding: 5px;
+    background-color: #0A0A0A;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-family: "Good Times";
+    font-size: 18px;
+  }
+  .btn:hover {
+    -webkit-box-shadow: 0 0.5em 0.5em -0.4em #ffffff;
+            box-shadow: 0 0.5em 0.5em -0.4em #ffffff;
+    -webkit-transform: translateY(-0.25em);
+            transform: translateY(-0.25em);
+  }
 }
 
 header {
   width: 100%;
   height: 100vh;
   background-image: url("../data/biomutantBg.png");
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,20 +561,51 @@ header .banner {
   justify-self: flex-end;
 }
 
-header .banner__text h1 {
+header .banner h1 {
   font-family: "Good Times";
   font-size: 72px;
   color: #FFFFFF;
   text-shadow: 0px 10px 5px #0A0A0A;
 }
 
-header .banner__text p {
+header .banner p {
   width: 520px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #ffffff;
   text-shadow: 0px 6px 5px #0A0A0A;
+}
+
+@media screen and (max-width: 414px) {
+  header {
+    height: 500px;
+    background-size: 1100px;
+  }
+  header nav {
+    height: 40px;
+  }
+  header .banner {
+    height: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    text-align: center;
+    margin: 0px 0px 50px 0px;
+  }
+  header .banner h1 {
+    font-size: 30px;
+  }
+  header .banner p {
+    width: 250px;
+    font-size: 12px;
+  }
 }
 
 main {
@@ -576,7 +636,7 @@ main h2 {
 }
 
 main .info {
-  height: 75vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
