@@ -1,5 +1,7 @@
 main{
 
+    display: flex;
+    flex-direction: column;
     color: $white;
 
     h1{
@@ -14,12 +16,17 @@ main{
         margin: 20px 0px;
         font-family: $goodTimes;
         text-align: center;
-        font-size: 45px;
+        font-size: 40px;
         line-height: 72px;
     }
 
-    display: flex;
-    flex-direction: column;
+    p{
+        font-family: $montserrat;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 20px 0px;
+    }
 
     .info{
         height: 90vh;
@@ -31,23 +38,9 @@ main{
         section{
             width: 600px;
             text-align: center;
-    
-            h1{
-                font-family: "Good Times";
-                font-size: 40px;
-                margin: 20px 0px;
-            }
-    
             hr{
                 width: 400px;
                 border: 3px solid $primaryColor;
-            }
-    
-            p{
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 400;
-                font-size: 20px;
-                margin: 20px 0px;
             }
         }
     
@@ -177,8 +170,6 @@ main{
 
             h2{
                 width: 330px;
-                font-family: $goodTimes;
-                font-size: 30px;
                 line-height: 36px;
                 
             }
@@ -202,5 +193,53 @@ main{
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    main{
+        width: 414px;
+        align-items: center;
+        h1{
+            font-size: 18px;
+            line-height: 22px;
+
+            margin: 10px 0px;
+        }
+
+        h2{
+            font-size: 12px;
+            line-height: 20px;
+
+            margin: 10px 0px;
+        }
+
+        p{
+            font-size: 10px;
+            line-height: 12px;
+
+            margin: 10px 0px;
+        }
+
+        .info{
+            width: 250px;
+            height: 500px;
+            padding: 80px 0px;
+
+            section{
+                width: 250px;
+                hr{
+                    width: 100%;
+                    border: 1px solid $primaryColor;
+                }
+            }
+
+            section:nth-child(2n){
+                hr{
+                    border: 1px solid $secondaryColor;
+                }
+            }
+        }
+
     }
 }
