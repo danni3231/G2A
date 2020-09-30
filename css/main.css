@@ -1076,4 +1076,32 @@ main .newsletter div .input input {
 .footer__payment img {
   height: 25px;
 }
+
+@media screen and (max-width: 414px) {
+  .footer {
+    height: 100px;
+    padding: 0px 50px;
+  }
+  .footer img {
+    width: 60px;
+  }
+  .footer__socialNetworks {
+    margin-top: 8px;
+  }
+  .footer__socialNetworks img {
+    width: 14px;
+  }
+  .footer__menu {
+    width: 185px;
+  }
+  .footer__menu section h1 {
+    font-size: 12px;
+  }
+  .footer__menu section ul {
+    display: none;
+  }
+  .footer__payment {
+    display: none;
+  }
+}
 /*# sourceMappingURL=main.css.map */

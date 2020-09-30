@@ -14,6 +14,7 @@
             width: 30px;
         }
     }
+
     &__menu{
         width: 690px;
         display: flex;
@@ -48,5 +49,40 @@
         img{
             height: 25px;
         }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .footer{
+        height: 100px;
+        padding: 0px 50px;
+        img{
+            width: 60px;
+        }
+
+        &__socialNetworks{
+            margin-top: 8px;
+            img{
+                width: 14px;
+            }
+        }
+
+        &__menu{
+            width: 185px;
+            section{
+                h1{
+                    font-size: 12px;
+                }
+
+                ul{
+                    display: none;
+                }
+            }
+        }
+
+        &__payment{
+            display: none;
+        }
+        
     }
 }
