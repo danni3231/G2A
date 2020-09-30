@@ -46,6 +46,10 @@ header{
                     }
                 }
             }
+
+            &--mobile{
+                display: none;
+            }
         }
 
         .profile{
@@ -98,6 +102,28 @@ header{
 
         nav{
             height: 40px;
+            padding: 0px 20px;
+            .navigation{
+                display: none;
+
+                &--mobile{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    img{
+                        height: 18px;
+                    }
+
+                    input{
+                        height: 18px;  
+                    }
+                }
+            }
+            .profile{
+                display: none;
+            }
         }
 
         .banner{
