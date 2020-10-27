@@ -1,10 +1,13 @@
 @mixin btnModifier($bg,$color,$size,$padding) {
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: $bg;
     border: 2px solid $color;
     padding: $padding;
 
     button{
+        width: 100%;
         padding: $padding;
         background-color: $bg;
         color: $color;
@@ -36,5 +39,7 @@
         &--promo{
             @include btnModifier($bgColor1,$white,10px,3px);
         }
+
+        
     }
 }

@@ -1,0 +1,35 @@
+.form{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input--form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        border: 2px solid $bgColor1;
+        padding: 6px;
+
+        margin: 15px 0px;
+
+        input{
+            width: 100%;
+            padding: 6px;
+            background-color: $white;
+            color: $bgColor1;
+    
+            border: 2px solid $bgColor1;
+            font-family: $goodTimes;
+            font-size: 12px;
+        }
+    }
+
+    .btn--form{
+        width: 150px;
+        margin: 15px 0px;
+        @include btnModifier($white,$bgColor1,12px,6px);
+    }
+}

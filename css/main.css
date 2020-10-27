@@ -4,6 +4,19 @@ body {
   background-color: #0A0A0A;
 }
 
+body a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+body a :visited {
+  text-decoration: none;
+}
+
+body .hidden {
+  display: none;
+}
+
 .logos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -399,12 +412,19 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #0A0A0A;
   border: 2px solid #ffffff;
   padding: 15px;
 }
 
 .btn button {
+  width: 100%;
   padding: 15px;
   background-color: #0A0A0A;
   color: #ffffff;
@@ -424,12 +444,19 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #0A0A0A;
   border: 2px solid #ffffff;
   padding: 5px;
 }
 
 .btn--promo button {
+  width: 100%;
   padding: 5px;
   background-color: #0A0A0A;
   color: #ffffff;
@@ -450,11 +477,18 @@ template {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #0A0A0A;
     border: 2px solid #ffffff;
     padding: 5px;
   }
   .btn button {
+    width: 100%;
     padding: 5px;
     background-color: #0A0A0A;
     color: #ffffff;
@@ -472,11 +506,18 @@ template {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #0A0A0A;
     border: 2px solid #ffffff;
     padding: 3px;
   }
   .btn--promo button {
+    width: 100%;
     padding: 3px;
     background-color: #0A0A0A;
     color: #ffffff;
@@ -492,10 +533,85 @@ template {
   }
 }
 
+.form {
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form .input--form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #0A0A0A;
+  padding: 6px;
+  margin: 15px 0px;
+}
+
+.form .input--form input {
+  width: 100%;
+  padding: 6px;
+  background-color: #ffffff;
+  color: #0A0A0A;
+  border: 2px solid #0A0A0A;
+  font-family: "Good Times";
+  font-size: 12px;
+}
+
+.form .btn--form {
+  width: 150px;
+  margin: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #0A0A0A;
+  padding: 6px;
+}
+
+.form .btn--form button {
+  width: 100%;
+  padding: 6px;
+  background-color: #ffffff;
+  color: #0A0A0A;
+  border: 2px solid #0A0A0A;
+  font-family: "Good Times";
+  font-size: 12px;
+}
+
+.form .btn--form:hover {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #0A0A0A;
+          box-shadow: 0 0.5em 0.5em -0.4em #0A0A0A;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
 header {
   width: 100%;
   height: 100vh;
-  background-image: url("../data/biomutantBg.png");
+  background-image: url("../data/bg/biomutantBg.png");
   background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,6 +666,7 @@ header nav .navigation ul {
 }
 
 header nav .navigation ul li {
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -1132,5 +1249,124 @@ main .newsletter div .input input {
   .footer__payment {
     display: none;
   }
+}
+
+.auth {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth article {
+  width: 600px;
+  border: 2px solid #ffffff;
+  padding: 13px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.auth__form {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth__form img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.auth__form p {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  margin: 15px 0px 30px 0px;
+}
+
+.auth__division {
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0px 30px 0px;
+}
+
+.auth__division hr {
+  width: 25px;
+}
+
+.auth__division p {
+  font-family: Good Times;
+  font-size: 7px;
+  line-height: 8px;
+  margin: 0px;
+  color: #000000;
+}
+
+.auth__btn {
+  width: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.auth__btn input {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 30px;
+}
+
+.auth__bottom {
+  height: 80px;
+  background-color: #0084C1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth__bottom p {
+  font-family: "Good Times";
+  font-size: 16px;
+  line-height: 14px;
+  margin: 0px;
+}
+
+.auth__bottom--secondary {
+  background-color: #F05F00;
 }
 /*# sourceMappingURL=main.css.map */

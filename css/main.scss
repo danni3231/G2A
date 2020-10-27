@@ -19,6 +19,19 @@ $montserrat: 'Montserrat', sans-serif;
 
 body{
     background-color: $bgColor1;
+
+    a{
+        text-decoration: none;
+        color: $white;
+    
+        :visited{
+            text-decoration: none;
+        }
+    }
+
+    .hidden{
+        display: none;
+    }
 }
 
 .logos{
@@ -74,6 +87,8 @@ body{
 
 @import 'reset';
 @import 'btn';
+@import 'form';
 @import 'header';
 @import 'content';
 @import 'footer';
+@import 'auth';

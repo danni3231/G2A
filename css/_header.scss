@@ -1,7 +1,7 @@
 header{
     width: 100%;
     height: 100vh;
-    background-image: url("../data/biomutantBg.png");
+    background-image: url("../data/bg/biomutantBg.png");
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -26,13 +26,14 @@ header{
         .navigation{
             display: flex;
             align-items: center;
+
             ul {
                 display: flex;
                 color: $white;
                 align-items: center;
     
                 li{
-                    
+                    color: white;
                     font-family: $montserrat;
                     font-weight: 500;
                     font-size: 18px;
@@ -44,6 +45,8 @@ header{
                         border-radius: 4px;
                         background-color: $white;
                     }
+
+
                 }
             }
 
