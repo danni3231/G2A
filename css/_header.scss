@@ -14,13 +14,17 @@ header{
         justify-content: space-between;
         padding: 0px 50px;
 
-        li{
-            list-style: none;
-            padding: 0px 30px;
+        ul{
+            padding: 0px;
+            li{
+                list-style: none;
+                padding: 0px 20px;
+            }
         }
 
         img{
             height: 30px;
+            margin-right: 10px;
         }
 
         .navigation{
@@ -63,6 +67,7 @@ header{
                 display: flex;
                 color: $white;
                 align-items: center;
+                margin: 0px;
 
                 li{
                     font-family: $goodTimes;

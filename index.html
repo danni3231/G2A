@@ -13,7 +13,7 @@
 
         <nav>
             <section class="navigation">
-                <img src="./data/elements/logo.png" alt="Logo.png">
+                <img src="./data/elements/logo.png" alt="logo.png">
                 <ul>
                     <li>Homepage</li>
                     <li></li>
@@ -25,12 +25,20 @@
                 </ul>
             </section>
 
-            <section class="profile">
-                <img src="./data/elements/carrito.png" alt="Shopping.svg">
+            <section class="profile profile__out">
+                <img src="./data/elements/carrito.png" alt="shopping.png">
                 <ul>
                     <li> <a href="./signIn.html">Sign in</a> </li>
                     <li>/</li>
                     <li> <a href="./signUp.html">Sign up</a></li>
+                </ul>
+            </section>
+
+            <section class="profile profile__in hidden">
+                <img src="./data/elements/carrito.png" alt="shopping.png">
+                <img src="./data/elements/profile.png" alt="profile.png">
+                <ul>
+                    <li class="username"> <a href="./signUp.html">username</a></li>
                 </ul>
             </section>
 
@@ -316,6 +324,11 @@
 
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/auth.js"></script>
     <script src="./scripts/main.js"></script>
 
 </body>

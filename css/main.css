@@ -14,7 +14,7 @@ body a :visited {
 }
 
 body .hidden {
-  display: none;
+  display: none !important;
 }
 
 .logos {
@@ -637,13 +637,18 @@ header nav {
   padding: 0px 50px;
 }
 
-header nav li {
+header nav ul {
+  padding: 0px;
+}
+
+header nav ul li {
   list-style: none;
-  padding: 0px 30px;
+  padding: 0px 20px;
 }
 
 header nav img {
   height: 30px;
+  margin-right: 10px;
 }
 
 header nav .navigation {
@@ -701,6 +706,7 @@ header nav .profile ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0px;
 }
 
 header nav .profile ul li {
