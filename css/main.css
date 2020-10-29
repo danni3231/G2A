@@ -608,7 +608,7 @@ template {
           transform: translateY(-0.25em);
 }
 
-header {
+.banner {
   width: 100%;
   height: 100vh;
   background-image: url("../data/bg/biomutantBg.png");
@@ -625,7 +625,7 @@ header {
           justify-content: space-between;
 }
 
-header nav {
+.banner nav {
   height: 80px;
   background: rgba(0, 0, 0, 0.7);
   display: -webkit-box;
@@ -637,21 +637,21 @@ header nav {
   padding: 0px 50px;
 }
 
-header nav ul {
+.banner nav ul {
   padding: 0px;
 }
 
-header nav ul li {
+.banner nav ul li {
   list-style: none;
   padding: 0px 20px;
 }
 
-header nav img {
+.banner nav img {
   height: 30px;
   margin-right: 10px;
 }
 
-header nav .navigation {
+.banner nav .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -660,7 +660,7 @@ header nav .navigation {
           align-items: center;
 }
 
-header nav .navigation ul {
+.banner nav .navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -670,14 +670,14 @@ header nav .navigation ul {
           align-items: center;
 }
 
-header nav .navigation ul li {
+.banner nav .navigation ul li {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
 }
 
-header nav .navigation ul li:nth-child(2n) {
+.banner nav .navigation ul li:nth-child(2n) {
   width: 8px;
   height: 8px;
   padding: 0px;
@@ -685,11 +685,11 @@ header nav .navigation ul li:nth-child(2n) {
   background-color: #ffffff;
 }
 
-header nav .navigation--mobile {
+.banner nav .navigation--mobile {
   display: none;
 }
 
-header nav .profile {
+.banner nav .profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -698,7 +698,7 @@ header nav .profile {
           align-items: center;
 }
 
-header nav .profile ul {
+.banner nav .profile ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -709,13 +709,13 @@ header nav .profile ul {
   margin: 0px;
 }
 
-header nav .profile ul li {
+.banner nav .profile ul li {
   font-family: "Good Times";
   font-size: 16px;
   padding: 0px 10px;
 }
 
-header .banner {
+.banner__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -729,20 +729,26 @@ header .banner {
   justify-self: flex-end;
 }
 
-header .banner h1 {
+.banner__info h1 {
   font-family: "Good Times";
   font-size: 72px;
   color: #FFFFFF;
   text-shadow: 0px 10px 5px #0A0A0A;
 }
 
-header .banner p {
+.banner__info p {
   width: 520px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #ffffff;
   text-shadow: 0px 6px 5px #0A0A0A;
+}
+
+.banner--aux {
+  height: 30vh;
+  background-image: url("../data/bg/biomutantBg.png");
+  background-position: top;
 }
 
 @media screen and (max-width: 414px) {
@@ -1374,5 +1380,33 @@ main .newsletter div .input input {
 
 .auth__bottom--secondary {
   background-color: #F05F00;
+}
+
+.filters {
+  width: 150px;
+  padding: 0px 50px;
+}
+
+.filters section h2 {
+  text-align: left;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.filters ul {
+  padding: 0px;
+}
+
+.filters ul li {
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.store {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

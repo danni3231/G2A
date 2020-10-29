@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>G2A</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <header class="banner banner--aux">
+        <nav>
+            <section class="navigation">
+                <img src="./data/elements/logo.png" alt="logo.png">
+                <ul>
+                    <li> <a href="./index.html">Homepage</a> </li>
+                    <li></li>
+                    <li>News</li>
+                    <li></li>
+                    <li>Sales</li>
+                    <li></li>
+                    <li> <a href="./store.html">Shop</a> </li>
+                </ul>
+            </section>
+
+            <section class="profile profile__out">
+                <img src="./data/elements/carrito.png" alt="shopping.png">
+                <ul>
+                    <li> <a href="./signIn.html">Sign in</a> </li>
+                    <li>/</li>
+                    <li> <a href="./signUp.html">Sign up</a></li>
+                </ul>
+            </section>
+
+            <section class="profile profile__in hidden">
+                <img src="./data/elements/carrito.png" alt="shopping.png">
+                <img class="profile__logOut" src="./data/elements/profile.png" alt="profile.png">
+                <ul>
+                    <li class="username"> <a href="./signUp.html">username</a></li>
+                </ul>
+            </section>
+
+            <section class="navigation--mobile">
+                <input type="image" src="./data/elements/hamburger.png" alt="">
+                <img src="./data/elements/logo.png" alt="">
+                <img src="./data/elements/carrito.png" alt="">
+            </section>
+
+        </nav>
+
+    </header>
+    <main>
+        <aside class="filters">
+
+            <section class="">
+                <h2>Sort by</h2>
+                <ul>
+                    <li>A-Z</li>
+                    <li>Z-A</li>
+                    <li>New</li>
+                    <li>Old</li>
+                </ul>
+            </section>
+
+            <section class="">
+                <h2>platform</h2>
+                <ul>
+                    <li>PC</li>
+                    <li>Xbox</li>
+                    <li>PS</li>
+                    <li>N. Switch</li>
+                </ul>
+            </section>
+
+            <section class="">
+                <h2>Price</h2>
+                <div>
+                    <input data-role="doubleslider">
+                    <p>min.</p>
+                    <p>max.</p>
+                </div>
+            </section>
+
+            <section class="">
+                <h2>Genre</h2>
+                <ul>
+                    <li>Action</li>
+                    <li>Adventure</li>
+                    <li>Fighting</li>
+                    <li>Platform</li>
+                    <li>Shooter</li>
+                    <li>Sports</li>
+                    <li>Strategy</li>
+                    <li>Simulation</li>
+                </ul>
+            </section>
+
+            <section class="">
+                <h2>Features</h2>
+                <ul>
+                    <li>Single-Player</li>
+                    <li>Multi-Player</li>
+                    <li>Online Multi-player</li>
+                    <li>Co-op</li>
+                    <li>Online Co-op</li>
+                    <li>Stats</li>
+                </ul>
+            </section>
+
+        </aside>
+        <hr>
+        <article class="store">
+            <section class="card">
+                <div class="card__info">
+
+                </div>
+            </section>
+            
+        </article>
+    </main>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/auth.js"></script>
+
+</body>
+</html>

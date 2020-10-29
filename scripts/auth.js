@@ -2,6 +2,7 @@ const profileIn = document.querySelector('.profile__in');
 const profileOut = document.querySelector('.profile__out');
 const authSignout = document.querySelector('.profile__signout');
 const username = document.querySelector('.username')
+const profileLogOut = document.querySelector('.profile__logOut')
 
 firebase.auth().onAuthStateChanged(function(user) {
   if(user) {
@@ -24,9 +25,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 // cerrar sesión
-/*
-authSignout.addEventListener('click', function(event) {
+
+profileLogOut.addEventListener('click', function(event) {
   event.preventDefault();
   firebase.auth().signOut();
 });
-*/

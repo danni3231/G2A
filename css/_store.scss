@@ -1,0 +1,26 @@
+.filters{
+    width: 150px;
+    padding: 0px 50px;
+    section{
+        h2{
+            text-align: left;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    ul{
+        padding: 0px;
+        li{
+            list-style: none;
+            font-family: $montserrat;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+}
+.store{
+    width: 100%;
+}
