@@ -6,7 +6,8 @@ signUp.addEventListener('submit', function (event) {
   const email = signUp.email.value;
   const password = signUp.password.value;
   const username = signUp.username.value;
-
+  const admin = signUp.admin.checked;
+  
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function (credentials) {
 
@@ -14,7 +15,8 @@ signUp.addEventListener('submit', function (event) {
 
     usersRef.doc(uid).set({
       email: email,
-      username: username
+      username: username,
+      admin: admin
     })
     .then(function () {
       window.location.href = 'index.html';
@@ -31,4 +33,5 @@ signUp.addEventListener('submit', function (event) {
     //signUp.querySelector('.form__error').classList.remove('hidden');
     // ...
   });
+  
 });
