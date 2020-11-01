@@ -472,6 +472,38 @@ template {
           transform: translateY(-0.25em);
 }
 
+.btn--card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0A0A0A;
+  border: 2px solid #ffffff;
+  padding: 10px;
+}
+
+.btn--card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0A0A0A;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  font-family: "Good Times";
+  font-size: 20px;
+}
+
+.btn--card:hover {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #ffffff;
+          box-shadow: 0 0.5em 0.5em -0.4em #ffffff;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
 @media screen and (max-width: 414px) {
   .btn {
     display: -webkit-box;
@@ -1382,9 +1414,78 @@ main .newsletter div .input input {
   background-color: #F05F00;
 }
 
+.store {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 50px 0px;
+}
+
+.store hr {
+  height: auto;
+}
+
+.store__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 50px 200px;
+}
+
+.card {
+  width: 510px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 2px solid #ffffff;
+  padding: 13px;
+  margin-bottom: 100px;
+}
+
+.card__info {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill;
+  border: 2px solid #ffffff;
+  padding: 13px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.card__info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card__info div p {
+  width: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.card__info div p s {
+  font-size: 15px;
+  font-weight: normal;
+}
+
 .filters {
   width: 150px;
-  padding: 0px 50px;
+  padding: 50px 50px;
 }
 
 .filters section h2 {
@@ -1404,9 +1505,5 @@ main .newsletter div .input input {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
-}
-
-.store {
-  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

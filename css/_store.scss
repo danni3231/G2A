@@ -1,6 +1,54 @@
+.store{
+    flex-direction: row;
+    padding: 50px 0px;
+    hr{
+        height: auto;
+    }
+
+    &__container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 50px 200px;
+    }
+}
+
+.card{
+    width: 510px;
+    height: fit-content;
+    border: 2px solid $white;
+    padding: 13px;
+    margin-bottom: 100px;
+
+    &__info{
+        height: fill;
+        border: 2px solid $white;
+        padding: 13px;
+        box-sizing: content-box;
+
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            p{
+                width: 100px;
+                font-family: $montserrat;
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 30px;
+                s{
+                    font-size: 15px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+
 .filters{
     width: 150px;
-    padding: 0px 50px;
+    padding: 50px 50px;
     section{
         h2{
             text-align: left;
@@ -21,6 +69,4 @@
         }
     }
 }
-.store{
-    width: 100%;
-}
+

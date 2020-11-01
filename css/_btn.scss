@@ -30,6 +30,10 @@
     &--promo{
         @include btnModifier($bgColor1,$white,15px,5px);
     }
+
+    &--card{
+        @include btnModifier($bgColor1,$white,20px,10px);
+    }
 }
 
 @media screen and (max-width: 414px) {
