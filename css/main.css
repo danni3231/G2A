@@ -504,6 +504,40 @@ template {
           transform: translateY(-0.25em);
 }
 
+.btn--form {
+  width: 150px;
+  margin: 15px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #0A0A0A;
+  padding: 6px;
+}
+
+.btn--form button {
+  width: 100%;
+  padding: 6px;
+  background-color: #ffffff;
+  color: #0A0A0A;
+  border: 2px solid #0A0A0A;
+  font-family: "Good Times";
+  font-size: 12px;
+}
+
+.btn--form:hover {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #0A0A0A;
+          box-shadow: 0 0.5em 0.5em -0.4em #0A0A0A;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+}
+
 @media screen and (max-width: 414px) {
   .btn {
     display: -webkit-box;
@@ -580,13 +614,15 @@ template {
 }
 
 .form div {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 15px 0px;
 }
 
@@ -594,8 +630,17 @@ template {
   zoom: 1.5;
 }
 
+.form div img {
+  width: 20px;
+  margin-left: 10px;
+}
+
 .form div p {
   margin: 0px 0px 0px 10px;
+}
+
+.form__deviceBtn {
+  width: 300px;
 }
 
 .form .input--form {
@@ -625,38 +670,29 @@ template {
   font-size: 12px;
 }
 
-.form .btn--form {
-  width: 150px;
-  margin: 15px 0px;
+.form .textarea--form {
+  height: 50px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #ffffff;
   border: 2px solid #0A0A0A;
   padding: 6px;
 }
 
-.form .btn--form button {
+.form .textarea--form--large {
+  height: 100px;
+}
+
+.form .textarea--form textarea {
   width: 100%;
-  padding: 6px;
-  background-color: #ffffff;
-  color: #0A0A0A;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: 2px solid #0A0A0A;
   font-family: "Good Times";
   font-size: 12px;
-}
-
-.form .btn--form:hover {
-  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #0A0A0A;
-          box-shadow: 0 0.5em 0.5em -0.4em #0A0A0A;
-  -webkit-transform: translateY(-0.25em);
-          transform: translateY(-0.25em);
 }
 
 .banner {
@@ -738,32 +774,6 @@ template {
 
 .banner nav .navigation--mobile {
   display: none;
-}
-
-.banner nav .profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.banner nav .profile ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #ffffff;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0px;
-}
-
-.banner nav .profile ul li {
-  font-family: "Good Times";
-  font-size: 16px;
-  padding: 0px 10px;
 }
 
 .banner__info {
@@ -1524,5 +1534,116 @@ main .newsletter div .input input {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px;
+}
+
+.profile__info {
+  width: 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.profile__info h2 {
+  margin: 0px;
+  line-height: 40px;
+}
+
+.profile__info p {
+  font-size: 28px;
+  margin: 0px;
+}
+
+.profile__form {
+  width: 600px;
+  border: 2px solid #ffffff;
+  padding: 13px;
+}
+
+.profile__form section {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile__form img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.profile__form h2 {
+  font-family: "Good Times";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 0px;
+  color: #000000;
+}
+
+.profile__form p {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+  text-align: center;
+  color: #000000;
+  margin: 10px 0px 30px 0px;
+}
+
+.profile__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px;
+}
+
+.profile__nav ul li {
+  font-family: "Good Times";
+  font-size: 16px;
+  padding: 0px 10px;
 }
 /*# sourceMappingURL=main.css.map */

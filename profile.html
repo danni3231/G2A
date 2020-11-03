@@ -1,12 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>G2A</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
 
+    <header class="banner banner--aux">
+        <nav>
+            <section class="navigation">
+                <img src="./data/elements/logo.png" alt="logo.png">
+                <ul>
+                    <li> <a href="./index.html">Homepage</a> </li>
+                    <li></li>
+                    <li>News</li>
+                    <li></li>
+                    <li>Sales</li>
+                    <li></li>
+                    <li> <a href="./store.html">Shop</a> </li>
+                </ul>
+            </section>
+
+            <section class="profile__nav profile__out">
+                <img src="./data/elements/carrito.png" alt="shopping.png">
+                <ul>
+                    <li> <a href="./signIn.html">Sign in</a> </li>
+                    <li>/</li>
+                    <li> <a href="./signUp.html">Sign up</a></li>
+                </ul>
+            </section>
+
+            <section class="profile__nav profile__in hidden">
+                <img src="./data/elements/carrito.png" alt="shopping.png">
+                <img class="profile__logOut" src="./data/elements/profile.png" alt="profile.png">
+                <ul>
+                    <li> <a class="username" href="./profile.html">username</a></li>
+                </ul>
+            </section>
+
+            <section class="navigation--mobile">
+                <input type="image" src="./data/elements/hamburger.png" alt="">
+                <img src="./data/elements/logo.png" alt="">
+                <img src="./data/elements/carrito.png" alt="">
+            </section>
+
+        </nav>
+
+    </header>
+
+    <main class="profile">
+        <article class="profile__info">
+            <img src="./data/elements/profile.png" alt="">
+            <div>
+                <h2>username</h2>
+                <p>email</p>
+            </div>
+        </article>
+
+        <article class="profile__form">
+
+            <section>
+                <h2>Admin panel</h2>
+                <p>add a new product!!</p>
+
+                <form class="form">
+
+                    <div class="input--form"><input name="title" placeholder="title" type="text"></div>
+
+                    <div class="textarea--form">
+                        <textarea name = "shortDescription" placeholder="short description"></textarea><br>
+                    </div>
+
+                    <div class="textarea--form textarea--form--large">
+                        <textarea name = "description" placeholder="description"></textarea><br>
+                    </div>
+
+                    <div class="input--form"><input name="genre" placeholder="genre" type="text"></div>
+
+                    <div class="textarea--form">
+                        <textarea name = "features" placeholder="features, add with commas"></textarea><br>
+                    </div>
+                    
+                    <div class="input--form"><input name="lastPrice" placeholder="last price" type="number"></div>
+                    <div class="input--form"><input name="newPrice" placeholder="new price" type="number"></div>
+
+                    <div class="form__deviceBtn">
+                        <div>
+                            <input name="pc" type="checkbox">
+                            <img src="./data/device/steam.svg" alt="">
+                        </div>
+    
+                        <div>
+                            <input name="xbox" type="checkbox">
+                            <img src="./data/device/xbox.svg" alt="">
+                        </div>
+    
+                        <div>
+                            <input name="play" type="checkbox">
+                            <img src="./data/device/play.png" alt="">
+                        </div>
+    
+                        <div>
+                            <input name="switch" type="checkbox">
+                            <img src="./data/device//nSwitch.png" alt="">
+                        </div>
+                    </div>
+                    
+
+                    <div class="btn--form"><button>Sign In</button></div>
+
+                </form>
+
+            </section>
+
+        </article>
+
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/auth.js"></script>
+
 </body>
+
 </html>

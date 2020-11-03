@@ -1,8 +1,9 @@
 const profileIn = document.querySelector('.profile__in');
 const profileOut = document.querySelector('.profile__out');
-const authSignout = document.querySelector('.profile__signout');
-const username = document.querySelector('.username')
+const usernameLi = document.querySelector('.username')
 const profileLogOut = document.querySelector('.profile__logOut')
+
+let username;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if(user) {
@@ -10,11 +11,11 @@ firebase.auth().onAuthStateChanged(function(user) {
     profileIn.classList.remove('hidden');
     profileOut.classList.add('hidden');
 
-
     usersRef.doc(user.uid).get().then(function (doc) {
       if(doc.exists) {
         const data = doc.data();
-        username.innerText = data.username;
+        username=data.username;
+        usernameLi.innerText = data.username;
       }
     });
   } else {

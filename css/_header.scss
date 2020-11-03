@@ -58,24 +58,6 @@
                 display: none;
             }
         }
-
-        .profile{
-            display: flex;
-            align-items: center;
-
-            ul{
-                display: flex;
-                color: $white;
-                align-items: center;
-                margin: 0px;
-
-                li{
-                    font-family: $goodTimes;
-                    font-size: 16px;
-                    padding: 0px 10px;
-                }
-            }
-        }
     }
 
     &__info{

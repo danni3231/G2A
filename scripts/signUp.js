@@ -30,8 +30,6 @@ signUp.addEventListener('submit', function (event) {
     var errorMessage = error.message;
     console.log(error)
     alert(errorMessage);
-    //signUp.querySelector('.form__error').classList.remove('hidden');
-    // ...
   });
   
 });

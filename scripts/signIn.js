@@ -15,10 +15,9 @@ signIn.addEventListener('submit', function (event) {
   })
   .catch(function(error) {
     // Handle Errors here.
-    console.log(error);
-
-    alert(error.message);
-    //login.querySelector('.form__error').classList.remove('hidden');
-    // ...
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    console.log(error)
+    alert(errorMessage);
   });
 });

@@ -34,6 +34,12 @@
     &--card{
         @include btnModifier($bgColor1,$white,20px,10px);
     }
+
+    &--form{
+        width: 150px;
+        margin: 15px 0px;
+        @include btnModifier($white,$bgColor1,12px,6px);
+    }
 }
 
 @media screen and (max-width: 414px) {
