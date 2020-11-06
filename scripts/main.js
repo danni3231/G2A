@@ -29,13 +29,7 @@ function handleNextSlide () {
     }else{
       current = 0;
     }
-
   }
-
-
-
-
-
 }
 
 setInterval(handleNextSlide, 1000);

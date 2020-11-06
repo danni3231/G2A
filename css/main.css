@@ -643,6 +643,20 @@ template {
   width: 300px;
 }
 
+.form label {
+  width: 100%;
+  font-family: "Good Times";
+  font-size: 12px;
+  color: #0A0A0A;
+  margin: 15px 0px;
+}
+
+.form label input[type="file"] {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
 .form .input--form {
   width: 100%;
   display: -webkit-box;

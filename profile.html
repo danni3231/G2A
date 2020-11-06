@@ -56,8 +56,8 @@
         <article class="profile__info">
             <img src="./data/elements/profile.png" alt="">
             <div>
-                <h2>username</h2>
-                <p>email</p>
+                <h2 class="profile__username">username</h2>
+                <p class="profile__email">email</p>
             </div>
         </article>
 
@@ -67,7 +67,7 @@
                 <h2>Admin panel</h2>
                 <p>add a new product!!</p>
 
-                <form class="form">
+                <form class="form upload">
 
                     <div class="input--form"><input name="title" placeholder="title" type="text"></div>
 
@@ -85,8 +85,19 @@
                         <textarea name = "features" placeholder="features, add with commas"></textarea><br>
                     </div>
                     
-                    <div class="input--form"><input name="lastPrice" placeholder="last price" type="number"></div>
-                    <div class="input--form"><input name="newPrice" placeholder="new price" type="number"></div>
+                    <div class="input--form"><input name="lastPrice" placeholder="last price" type="number" step="any"></div>
+                    <div class="input--form"><input name="newPrice" placeholder="new price" type="number" step="any"></div>
+
+                    <label>
+                        Cover img
+                        <input type="file" name="coverImg">
+                    </label>
+
+                    <label>
+                        Card img
+                        <input type="file" name="cardImg">
+                    </label>
+
 
                     <div class="form__deviceBtn">
                         <div>
@@ -121,11 +132,60 @@
 
     </main>
 
+    <footer class="footer">
+        <article>
+            <img src="./data/elements/logo.png" alt="">
+            <section class="footer__socialNetworks">
+                <img src="./data/networks/twiter.svg" alt="">
+                <img src="./data/networks/instagram.svg" alt="">
+                <img src="./data/networks/facebook.svg" alt="">
+            </section>
+
+        </article>
+        <article class="footer__menu">
+            <section>
+                <h1>G2A</h1>
+                <ul>
+                    <li>About us</li>
+                    <li>Careers</li>
+                    <li>Newsroom</li>
+                    <li>Contact</li>
+                </ul>
+            </section>
+            <section>
+                <h1>PRODUCTS</h1>
+                <ul>
+                    <li>G2A PAY</li>
+                    <li>G2A Goldmine</li>
+                    <li>G2A Gift Card</li>
+                    <li>G2A Charity</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Help</h1>
+                <ul>
+                    <li>Support Hub</li>
+                    <li>Stay Safe</li>
+                    <li>Terms & Conditions</li>
+                    <li>Privacy & Cookies</li>
+                    <li>Returns & Refunds</li>
+                </ul>
+            </section>
+        </article>
+        <article class="footer__payment">
+            <img src="./data/payment/paypal.png" alt="paypal.png">
+            <img src="./data/payment/visa.png" alt="visa.png">
+            <img src="./data/payment/masterCard.png" alt="masterCard.png">
+        </article>
+
+    </footer>
+
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js"></script>
+    <script src="./scripts/profile.js"></script>
 
 </body>
 

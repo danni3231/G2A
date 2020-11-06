@@ -1,9 +1,9 @@
 const profileIn = document.querySelector('.profile__in');
 const profileOut = document.querySelector('.profile__out');
-const usernameLi = document.querySelector('.username')
+const username = document.querySelector('.username')
 const profileLogOut = document.querySelector('.profile__logOut')
 
-let username;
+var userinfo;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if(user) {
@@ -14,10 +14,11 @@ firebase.auth().onAuthStateChanged(function(user) {
     usersRef.doc(user.uid).get().then(function (doc) {
       if(doc.exists) {
         const data = doc.data();
-        username=data.username;
-        usernameLi.innerText = data.username;
+        userinfo = data;
+        username.innerText = data.username;
       }
     });
+    
   } else {
     // si no existe quiere decir que no ha iniciado sesión o acaba de cerrar sesión
     profileIn.classList.add('hidden');

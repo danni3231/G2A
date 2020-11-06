@@ -28,6 +28,21 @@
         width: 300px;
     }
 
+    label{
+        width: 100%;
+        font-family: $goodTimes;
+        font-size: 12px;
+        color: $bgColor1;
+        margin: 15px 0px;
+
+        input[type="file"]{
+            width: 100%;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+    }
+
     .input--form{
         width: 100%;
         display: flex;
