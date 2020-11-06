@@ -36,8 +36,24 @@ upload.addEventListener('submit', function (event) {
     }
 
     function handleThen (docRef) {
-        
-        
+        alert("The videogame was upload ")
+        upload.title.value = '';
+        upload.shortDescription.value = '';
+        upload.description.value = '';
+        upload.genre.value = '';
+        upload.features.value = '';
+        upload.lastPrice.value = '';
+        upload.newPrice.value = '';
+        upload.coverImg.value = '';
+        upload.cardImg.value = '';
+        upload.RefImg.value = '';
+        upload.RefImg.value = '';
+
+        for (let item of inputsDevices){
+            item.checked = false;
+        }
+
+        imagePaths = []; 
     }
     
     function handleCatch (error) {
