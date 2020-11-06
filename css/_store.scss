@@ -8,9 +8,17 @@
     &__container{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         padding: 50px 200px;
+    }
+
+    &__selection{
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        align-self: center;
     }
 }
 

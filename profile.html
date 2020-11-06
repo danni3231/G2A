@@ -90,14 +90,18 @@
 
                     <label>
                         Cover img
-                        <input type="file" name="coverImg">
+                        <input type="file" name="coverImg" class="inputImg">
                     </label>
 
                     <label>
                         Card img
-                        <input type="file" name="cardImg">
+                        <input type="file" name="cardImg" class="inputImg">
                     </label>
 
+                    <label>
+                        Ref imgs
+                        <input type="file" name="RefImg" class="inputImg--Multi" multiple>
+                    </label>
 
                     <div class="form__deviceBtn">
                         <div>
@@ -182,6 +186,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js"></script>

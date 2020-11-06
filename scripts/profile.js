@@ -5,7 +5,7 @@ const profileEmail = document.querySelector(".profile__email");
 
 const upload = document.querySelector(".upload");
 
-console.log(upload);
+var imagePaths = [];
 
 upload.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -30,10 +30,13 @@ upload.addEventListener('submit', function (event) {
         features: features,
         lastPrice: upload.lastPrice.value,
         newPrice: upload.newPrice.value,
-        devices: devices
+        devices: devices,
+
+        storageImgs: imagePaths,
     }
 
     function handleThen (docRef) {
+        
         
     }
     
@@ -46,6 +49,44 @@ upload.addEventListener('submit', function (event) {
     .then(handleThen)
     .catch(handleCatch);
 
+});
+
+const imgsInputs = upload.querySelectorAll('.inputImg');
+
+imgsInputs.forEach(function(input, index) {
+  
+  input.addEventListener('change', function () {
+  
+    // Create a reference to 'mountains.jpg'
+    var newImageRef = storageRef.child(`products/${input.name}${Math.floor(Math.random()*999999999)}.jpg`);
+  
+    var file = input.files[0]; // use the Blob or File API
+  
+    newImageRef.put(file).then(function(snapshot) {
+      console.log(snapshot)
+      console.log('Uploaded a blob or file!');
+      imagePaths.push(snapshot.metadata.fullPath);
+    });
+    
+  });
+
+
+});
+
+const fileMulti = document.querySelector('.inputImg--Multi');
+fileMulti.addEventListener('change', function() {
+
+  Array.from(fileMulti.files).forEach(function(file, index) {
+
+    console.log(file);
+    var newImageRef = storageRef.child(`products/${fileMulti.name}${Math.floor(Math.random()*999999999)}.jpg`);
+
+    newImageRef.put(file).then(function(snapshot) {
+      console.log(snapshot)
+      console.log('Uploaded a blob or file!');
+      imagePaths.push(snapshot.metadata.fullPath);
+    });
+  });
 });
 
 
