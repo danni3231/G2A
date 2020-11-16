@@ -1,10 +1,10 @@
-const storeContainer = document.querySelector('.store__container');
+const refrencesContainer = document.querySelector('.store__container');
 
 function renderProducts(list) {
-    storeContainer.innerHTML = '';
+    refrencesContainer.innerHTML = '';
 
     list.forEach(function (elem) {
-        const newProduct = document.createElement('div');
+        const newProduct = document.createElement('section');
         newProduct.classList.add('card');
 
         const url = `product.html?${elem.id}-${elem.title}`;
@@ -12,13 +12,13 @@ function renderProducts(list) {
         newProduct.innerHTML = `
         <div class="card__info">
 
-            <img class="card__img" src="./data/farCry5-P.png" alt="">
+            <img class="card__img" src="" alt="">
 
             <h2><a href="${url}"> ${elem.title} <a></h2>
             <div>
                 <p>
-                    ${elem.newPrice}
-                    <s>${elem.lastPrice}</s>
+                    $${elem.newPrice}
+                    <s>$${elem.lastPrice}</s>
                 </p>
                 <div class="btn--card"><button>add to cart</button></div>
             </div>
@@ -48,7 +48,7 @@ function renderProducts(list) {
 
         });
 
-        storeContainer.appendChild(newProduct);
+        refrencesContainer.appendChild(newProduct);
     });
 }
 
@@ -65,7 +65,7 @@ function getProducts(){
       });
       renderProducts(objects);
     });
-  }
+}
   
   // render inicial con todos los productos
   getProducts();

@@ -79,7 +79,6 @@ imgsInputs.forEach(function(input, index) {
     var file = input.files[0]; // use the Blob or File API
   
     newImageRef.put(file).then(function(snapshot) {
-      console.log(snapshot)
       console.log('Uploaded a blob or file!');
       imagePaths.push(snapshot.metadata.fullPath);
     });

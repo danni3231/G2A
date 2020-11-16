@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>G2A</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
+
     <header class="banner banner--aux">
         <nav>
             <section class="navigation">
@@ -21,7 +24,7 @@
                     <li> <a href="./store.html">Shop</a> </li>
                 </ul>
             </section>
-            
+
             <section class="profile__nav profile__out">
                 <img src="./data/elements/carrito.png" alt="shopping.png">
                 <ul>
@@ -48,79 +51,45 @@
         </nav>
 
     </header>
-    <main class="store">
-        <aside class="filters">
 
-            <section class="">
-                <h2>Sort by</h2>
-                <ul>
-                    <li>A-Z</li>
-                    <li>Z-A</li>
-                    <li>New</li>
-                    <li>Old</li>
-                </ul>
-            </section>
+    <main class="product">
+        <article>
+            <div class="product__img">
+                <img src="" alt="">
+            </div>
 
-            <section class="">
-                <h2>platform</h2>
-                <ul>
-                    <li>PC</li>
-                    <li>Xbox</li>
-                    <li>PS</li>
-                    <li>N. Switch</li>
-                </ul>
-            </section>
+            <section class="product__info">
 
-            <section class="">
-                <h2>Price</h2>
-                <div>
-                    <input type="range" name="" id="">
-                    <p>min.</p>
-                    <p>max.</p>
+                <h1 class="product__title">title</h1>
+                <p>...</p>
+                <div class="product__devices">
                 </div>
+                <section>
+                    <div class="product__price">
+                        <p>$5.50</p>
+                        <s>$8.99</s>
+                    </div>
+
+                    <div class="btn"><button>add to cart</button></div>
+
+                </section>
+
             </section>
 
-            <section class="">
-                <h2>Genre</h2>
-                <ul>
-                    <li>Action</li>
-                    <li>Adventure</li>
-                    <li>Fighting</li>
-                    <li>Platform</li>
-                    <li>Shooter</li>
-                    <li>Sports</li>
-                    <li>Strategy</li>
-                    <li>Simulation</li>
-                </ul>
-            </section>
-
-            <section class="">
-                <h2>Features</h2>
-                <ul>
-                    <li>Single-Player</li>
-                    <li>Multi-Player</li>
-                    <li>Online Multi-player</li>
-                    <li>Co-op</li>
-                    <li>Online Co-op</li>
-                    <li>Stats</li>
-                </ul>
-            </section>
-
-        </aside>
-        <hr>
-        <article class="store__container">
-            
         </article>
-    <!--
-        <section class="store__selection">
-            <p>Page:</p>
-            <input type="image" src="" alt="">
-            <a href="">1</a>
-            <a href="">2</a>
-            <input type="image" src="" alt="">
-        </section>
-    -->
+
+        <h2>description</h2>
+        <p class="product__description">...</p>
+
+        <div class="product__tags">
+            <h2>tags</h2>
+        </div>
+
+        <section class="product__references"></section>
+
+
     </main>
+
     <footer class="footer">
         <article>
             <img src="./data/elements/logo.png" alt="">
@@ -168,17 +137,15 @@
         </article>
 
     </footer>
-    
+
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="./scripts/firebase.js"></script>
     <script src="./scripts/auth.js"></script>
+    <script src="./scripts/product.js"></script>
 
-    <script src="./scripts/store.js"></script>
-    <!-- 
-    
-    -->
 </body>
+
 </html>
