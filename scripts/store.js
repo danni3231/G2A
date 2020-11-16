@@ -32,10 +32,10 @@ function renderProducts(list) {
                     // Or inserted into an <img> element:
                     var img = newProduct.querySelector('img');
 
-                    if(url.includes('cardImg')){
+                    if (url.includes('cardImg')) {
                         img.src = url;
                     }
-                    
+
                 }).catch(function (error) {
                     // Handle any errors
                 });
@@ -46,26 +46,42 @@ function renderProducts(list) {
         const addBtn = newProduct.querySelector('.btn--card');
         addBtn.addEventListener('click', function () {
 
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
+
+                    usersRef.doc(user.uid).collection('shopping cart').doc(elem.id)
+                        .set(elem)
+                        .then(function () {
+                            console.log("se agrego el juego");
+                        });
+
+                } else {
+                    // si no existe quiere decir que no ha iniciado sesión o acaba de cerrar sesión
+                    alert("debes iniciar sesion");
+                }
+            });
+
         });
 
         refrencesContainer.appendChild(newProduct);
     });
 }
 
-function getProducts(){
+function getProducts() {
     productsRef  // referencia de la colección
-    .get() // pide todos los documentos de la colección
-    .then((querySnapshot) => {
-      const objects = [];
-      querySnapshot.forEach((doc) => {
-          const obj = doc.data();
-          obj.id = doc.id;
-          objects.push(obj);
-          console.log(`${doc.id} => ${doc.data()}`);
-      });
-      renderProducts(objects);
-    });
+        .get() // pide todos los documentos de la colección
+        .then((querySnapshot) => {
+            const objects = [];
+            querySnapshot.forEach((doc) => {
+                const obj = doc.data();
+                obj.id = doc.id;
+                objects.push(obj);
+                console.log(`${doc.id} => ${doc.data()}`);
+            });
+            renderProducts(objects);
+        });
 }
-  
-  // render inicial con todos los productos
-  getProducts();
+
+// render inicial con todos los productos
+getProducts();

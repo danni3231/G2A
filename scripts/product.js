@@ -42,15 +42,15 @@ window.addEventListener('load', function () {
             const devices = document.querySelector('.product__devices');
             const tags = document.querySelector('.product__tags');
 
-            for (let item of product.devices){
+            for (let item of product.devices) {
                 console.log(item);
                 const img = document.createElement('img');
-                if(item == 'steam' || item == 'xbox'){
+                if (item == 'steam' || item == 'xbox') {
                     img.src = `./data/device/${item}.svg`;
-                }else{
+                } else {
                     img.src = `./data/device/${item}.png`;
                 }
-                
+
                 devices.appendChild(img);
 
                 const tag = document.createElement('p');
@@ -60,7 +60,7 @@ window.addEventListener('load', function () {
                 tags.appendChild(tag);
             }
 
-            for (let item of product.features){
+            for (let item of product.features) {
                 const tag = document.createElement('p');
                 tag.classList.add('product__tag');
                 tag.innerText = item;
@@ -77,19 +77,19 @@ window.addEventListener('load', function () {
 
                 let newList = [];
 
-                for(let i=0; i<3 ; i++){
-                    let randomIndex = Math.floor(Math.random()* list.length);
+                for (let i = 0; i < 3; i++) {
+                    let randomIndex = Math.floor(Math.random() * list.length);
                     newList.push(list[randomIndex]);
                     list.slice(randomIndex);
                 }
-            
+
                 newList.forEach(function (elem) {
                     const newProduct = document.createElement('section');
                     newProduct.classList.add('card');
                     newProduct.classList.add('card--reference');
-            
+
                     const url = `product.html?${elem.id}-${elem.title}`;
-            
+
                     newProduct.innerHTML = `
                     <div class="card__info">
             
@@ -106,46 +106,62 @@ window.addEventListener('load', function () {
             
                     </div>
                     `;
-            
+
                     if (elem.storageImgs) {
                         elem.storageImgs.forEach(function (imageRef) {
                             storageRef.child(imageRef).getDownloadURL().then(function (url) {
                                 // Or inserted into an <img> element:
                                 var img = newProduct.querySelector('img');
-            
-                                if(url.includes('cardImg')){
+
+                                if (url.includes('cardImg')) {
                                     img.src = url;
                                 }
-                                
+
                             }).catch(function (error) {
                                 // Handle any errors
                             });
                         })
                     }
-            
+
                     // al hacer click al botón de editar
                     const addBtn = newProduct.querySelector('.btn--card');
                     addBtn.addEventListener('click', function () {
-            
+
+                        firebase.auth().onAuthStateChanged(function (user) {
+                            if (user) {
+                                // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
+
+                                usersRef.doc(user.uid).collection('shopping cart').doc(elem.id)
+                                    .set(elem)
+                                    .then(function () {
+                                        console.log("se agrego el juego");
+                                    });
+
+                            } else {
+                                // si no existe quiere decir que no ha iniciado sesión o acaba de cerrar sesión
+                                alert("debes iniciar sesion");
+                            }
+                        });
+
                     });
-            
+
                     refrencesContainer.appendChild(newProduct);
                 });
             }
 
             productsRef  // referencia de la colección
-            .get() // pide todos los documentos de la colección
-            .then((querySnapshot) => {
-              const objects = [];
-              querySnapshot.forEach((doc) => {
-                  const obj = doc.data();
-                  obj.id = doc.id;
-                  objects.push(obj);
-              });
+                .get() // pide todos los documentos de la colección
+                .then((querySnapshot) => {
+                    const objects = [];
+                    querySnapshot.forEach((doc) => {
+                        const obj = doc.data();
+                        obj.id = doc.id;
+                        objects.push(obj);
+                    });
 
-              renderReferences(objects);
-            });
-            
+                    renderReferences(objects);
+                });
+
         });
 
 });
