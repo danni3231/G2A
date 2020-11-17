@@ -1,7 +1,7 @@
-const refrencesContainer = document.querySelector('.store__container');
+const storeContainer = document.querySelector('.store__container');
 
 function renderProducts(list) {
-    refrencesContainer.innerHTML = '';
+    storeContainer.innerHTML = '';
 
     list.forEach(function (elem) {
         const newProduct = document.createElement('section');
@@ -64,7 +64,7 @@ function renderProducts(list) {
 
         });
 
-        refrencesContainer.appendChild(newProduct);
+        storeContainer.appendChild(newProduct);
     });
 }
 

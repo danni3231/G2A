@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>G2A</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
     <link rel="stylesheet" href="./css/main.css">
 </head>
-
 <body>
-
     <header class="banner banner--aux">
         <nav>
             <section class="navigation">
@@ -24,7 +21,7 @@
                     <li> <a href="./store.html">Shop</a> </li>
                 </ul>
             </section>
-
+            
             <section class="profile__nav profile__out">
                 <img src="./data/elements/carrito.png" alt="shopping.png">
                 <ul>
@@ -52,42 +49,35 @@
 
     </header>
 
-    <main class="product">
-        <article>
-            <div class="product__img">
-                <img src="" alt="">
-            </div>
-
-            <section class="product__info">
-
-                <h1 class="product__title">title</h1>
-                <p>...</p>
-                <div class="product__devices">
-                </div>
-                <section>
-                    <div class="product__price">
-                        <p>$5.50</p>
-                        <s>$8.99</s>
-                    </div>
-
-                    <div class="btn"><button>add to cart</button></div>
-
-                </section>
+    <main class="cart">
+        <article class="cart__list">
+            <h2>Your cart</h2>
+            <section class="cart__container">
 
             </section>
-
         </article>
+        
+        <hr>
 
-        <h2>description</h2>
-        <p class="product__description">...</p>
-
-        <div class="product__tags">
-            <h2>tags</h2>
-        </div>
-
-        <section class="product__references"></section>
-
-
+        <aside>
+            <article class="summary">
+                <h2>summary</h2>
+                <div>
+                    <p>Subtotal:</p>
+                    <p class="summary__subtotal">...</p>
+                </div>
+                <div>
+                    <p>Discount:</p>
+                    <p class="summary__discount">...</p>
+                </div>
+                <hr>
+                <div>
+                    <p>Total:</p>
+                    <p class="summary__total">...</p>
+                </div>
+            </article>
+            
+        </aside>
     </main>
 
     <footer class="footer">
@@ -137,15 +127,16 @@
         </article>
 
     </footer>
-
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
-    <script src="./scripts/firebase.js"></script>
-    <script src="./scripts/auth.js"></script>
-    <script src="./scripts/product.js"></script>
-
+    
 </body>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+<script src="./scripts/firebase.js"></script>
+<script src="./scripts/auth.js"></script>
+
+<script src="./scripts/cart.js"></script>
 
 </html>

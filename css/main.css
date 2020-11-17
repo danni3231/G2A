@@ -1684,6 +1684,10 @@ main .newsletter div .input input {
   padding: 0px 10px;
 }
 
+.profile__logOut {
+  cursor: pointer;
+}
+
 .product {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1748,13 +1752,32 @@ main .newsletter div .input input {
       justify-content: space-around;
 }
 
+.product__info--cart {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
 .product__img {
   border: 2px solid #ffffff;
   padding: 13px;
 }
 
+.product__img--cart {
+  margin-right: 60px;
+}
+
+.product__img--cart img {
+  width: 210px;
+}
+
 .product__price {
-  width: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1776,6 +1799,17 @@ main .newsletter div .input input {
 .product__price s {
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
+}
+
+.product__price--cart p {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.product__price--cart s {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
 }
 
 .product__devices {
@@ -1822,6 +1856,72 @@ main .newsletter div .input input {
 }
 
 .product__references {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product--cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.product--cart p {
+  margin: 10px 0px;
+}
+
+.product--cart h2 {
+  line-height: 45px;
+  margin-top: 0px;
+}
+
+.cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 100px;
+}
+
+.cart h2 {
+  text-align: left;
+}
+
+.cart hr {
+  height: auto;
+}
+
+.cart__list {
+  width: 60%;
+}
+
+.cart aside {
+  width: 30%;
+}
+
+.cart .summary {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  border: 1px solid #ffffff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cart .summary div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

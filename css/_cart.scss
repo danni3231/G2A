@@ -1,0 +1,37 @@
+.cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 100px;
+
+    h2{
+        text-align: left;
+    }
+
+    hr{
+        height: auto;
+    }
+
+    &__list{
+        width: 60%;
+    }
+
+    aside{ 
+        width: 30%;
+     }
+
+    .summary{
+        width: 100%;
+        height: fit-content;
+        padding: 30px;
+        border: 1px solid $white;
+        box-sizing: border-box;
+
+        div{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+}
+

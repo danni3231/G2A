@@ -70,10 +70,10 @@ window.addEventListener('load', function () {
 
             // add references
 
-            const refrencesContainer = document.querySelector('.product__references');
+            const referencesContainer = document.querySelector('.product__references');
 
             function renderReferences(list) {
-                refrencesContainer.innerHTML = '';
+                referencesContainer.innerHTML = '';
 
                 let newList = [];
 
@@ -145,7 +145,7 @@ window.addEventListener('load', function () {
 
                     });
 
-                    refrencesContainer.appendChild(newProduct);
+                    referencesContainer.appendChild(newProduct);
                 });
             }
 
