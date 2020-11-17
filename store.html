@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>G2A</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
     <link rel="stylesheet" href="./css/main.css">
+
 </head>
+
 <body>
     <header class="banner banner--aux">
         <nav>
@@ -21,7 +24,7 @@
                     <li> <a href="./store.html">Shop</a> </li>
                 </ul>
             </section>
-            
+
             <section class="profile__nav profile__out">
                 <img src="./data/elements/carrito.png" alt="shopping.png">
                 <ul>
@@ -50,68 +53,53 @@
     </header>
     <main class="store">
         <aside class="filters">
-
-            <section class="">
+            <form >
                 <h2>Sort by</h2>
-                <ul>
-                    <li>A-Z</li>
-                    <li>Z-A</li>
-                    <li>New</li>
-                    <li>Old</li>
-                </ul>
-            </section>
+                <select name="sort" size="2">
+                    <option value="a-z">A-Z</option>
+                    <option value="z-a">Z-A</option>
+                </select>
 
-            <section class="">
-                <h2>platform</h2>
-                <ul>
-                    <li>PC</li>
-                    <li>Xbox</li>
-                    <li>PS</li>
-                    <li>N. Switch</li>
-                </ul>
-            </section>
-
-            <section class="">
-                <h2>Price</h2>
-                <div>
-                    <input type="range" name="" id="">
-                    <p>min.</p>
-                    <p>max.</p>
-                </div>
-            </section>
-
-            <section class="">
+                <h2>Platform</h2>
+                <select name="platform" size="5">
+                    <option value="">All</option>
+                    <option value="steam">Pc</option>
+                    <option value="xbox">Xbox</option>
+                    <option value="play">Play Station</option>
+                    <option value="nswitch">N. Switch</option>
+                </select>
+    
                 <h2>Genre</h2>
-                <ul>
-                    <li>Action</li>
-                    <li>Adventure</li>
-                    <li>Fighting</li>
-                    <li>Platform</li>
-                    <li>Shooter</li>
-                    <li>Sports</li>
-                    <li>Strategy</li>
-                    <li>Simulation</li>
-                </ul>
-            </section>
+                <select name="genre" size="9">
+                    <option value="">All</option>
+                    <option value="action">Action</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="platform">Platform</option>
+                    <option value="shooter">Shooter</option>
+                    <option value="sports">Sports</option>
+                    <option value="role">Role</option>
+                    <option value="rpg">Rpg</option>
+                </select>
 
-            <section class="">
                 <h2>Features</h2>
-                <ul>
-                    <li>Single-Player</li>
-                    <li>Multi-Player</li>
-                    <li>Online Multi-player</li>
-                    <li>Co-op</li>
-                    <li>Online Co-op</li>
-                    <li>Stats</li>
-                </ul>
-            </section>
+                <select name="features" size="7">
+                    <option value="">All</option>
+                    <option value="single-player">Single-Player</option>
+                    <option value="multi-player">Multi-Player</option>
+                    <option value="online multi-player">Online Multi-player</option>
+                    <option value="co-op">Co-op</option>
+                    <option value="online co-op">Online Co-op</option>
+                    <option value="achievement">Achievement</option>
+                </select>
+            </form>
 
         </aside>
         <hr>
         <article class="store__container">
-            
+
         </article>
-    <!--
+        <!--
         <section class="store__selection">
             <p>Page:</p>
             <input type="image" src="" alt="">
@@ -168,7 +156,7 @@
         </article>
 
     </footer>
-    
+
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
@@ -177,8 +165,7 @@
     <script src="./scripts/auth.js"></script>
 
     <script src="./scripts/store.js"></script>
-    <!-- 
-    
-    -->
+
 </body>
+
 </html>

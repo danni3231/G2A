@@ -1554,23 +1554,35 @@ main .newsletter div .input input {
   padding: 50px 50px;
 }
 
-.filters section h2 {
+.filters h2 {
   text-align: left;
   font-size: 20px;
   line-height: 24px;
 }
 
-.filters ul {
-  padding: 0px;
+.filters select {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
 }
 
-.filters ul li {
-  list-style: none;
+.filters select:focus {
+  outline: none;
+}
+
+.filters select option {
+  color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
+  cursor: pointer;
+}
+
+.filters select option:checked {
+  background-color: #ffffff !important;
 }
 
 .profile {

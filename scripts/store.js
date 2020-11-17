@@ -68,16 +68,16 @@ function renderProducts(list) {
     });
 }
 
+const objects = [];
 function getProducts() {
     productsRef  // referencia de la colección
         .get() // pide todos los documentos de la colección
         .then((querySnapshot) => {
-            const objects = [];
             querySnapshot.forEach((doc) => {
                 const obj = doc.data();
                 obj.id = doc.id;
                 objects.push(obj);
-                console.log(`${doc.id} => ${doc.data()}`);
+                //console.log(`${doc.id} => ${doc.data()}`);
             });
             renderProducts(objects);
         });
@@ -85,3 +85,94 @@ function getProducts() {
 
 // render inicial con todos los productos
 getProducts();
+
+
+
+const filters = document.querySelector('.filters').querySelector('form');
+
+console.log(filters);
+
+filters.addEventListener('input', function () {
+    let copy = objects.slice();
+
+    const sort = filters.sort.value;
+
+    switch (sort) {
+        case 'a-z':
+            copy.sort(function (a, b) {
+                if (a.title > b.title) {
+                    return 1;
+                  }
+                  if (a.title < b.title) {
+                    return -1;
+                  }
+                  return 0;
+            });
+            break;
+        case 'z-a':
+            copy.sort(function (a, b) {
+                if (a.title < b.title) {
+                    return 1;
+                  }
+                  if (a.title > b.title) {
+                    return -1;
+                  }
+                  return 0;
+            });
+            break;
+    }
+
+    const genre = filters.genre.value;
+
+    if (genre != '') {
+        copy = copy.filter(function (elem) {
+            if (elem.genre.toLowerCase().includes(genre)) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+    }
+
+    const platform = filters.platform.value;
+
+    if (platform != '') {
+        copy = copy.filter(function (elem) {
+            let contains = false;
+            for (const device of elem.devices) {
+                if (device.toLowerCase() == platform) {
+                    contains = true;
+                }
+            }
+
+            if (contains) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+    }
+
+    const features = filters.features.value;
+
+    if (features != '') {
+        copy = copy.filter(function (elem) {
+            let contains = false;
+            for (const feature of elem.features) {
+                if (feature.toLowerCase() == features) {
+                    contains = true;
+                }
+            }
+
+            if (contains) {
+                return true;
+            } else {
+                return false;
+            }
+        });
+    }
+
+
+
+    renderProducts(copy);
+});

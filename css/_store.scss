@@ -67,23 +67,35 @@
 .filters{
     width: 150px;
     padding: 50px 50px;
-    section{
-        h2{
-            text-align: left;
-            font-size: 20px;
-            line-height: 24px;
-        }
+
+    h2{
+        text-align: left;
+        font-size: 20px;
+        line-height: 24px;
     }
 
-    ul{
-        padding: 0px;
-        li{
-            list-style: none;
+    select{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        overflow: hidden;
+
+        &:focus{
+            outline: none;
+        }
+
+        option{
+            color: $white;
             font-family: $montserrat;
             font-style: normal;
             font-weight: 500;
             font-size: 15px;
             line-height: 18px;
+            cursor: pointer;
+
+            &:checked{
+                background-color: $white  !important ;
+            }
         }
     }
 }
