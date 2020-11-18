@@ -130,6 +130,8 @@
 
     &--cart{
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 100px;
 
         p{

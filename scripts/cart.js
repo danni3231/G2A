@@ -20,6 +20,9 @@ function renderCart(list) {
                 <s>$${elem.lastPrice}</s>
             </div>
         </div>
+
+        <div class="btn"><button>delete</button></div>
+        
         `;
 
         if (elem.storageImgs) {
@@ -38,7 +41,24 @@ function renderCart(list) {
             })
         }
 
-        // al hacer click al botón de editar
+        const deleteBtn = newProduct.querySelector('.btn');
+
+        deleteBtn.addEventListener('click', function () {
+            firebase.auth().onAuthStateChanged(function (user) {
+                if (user) {
+                    usersRef.doc(user.uid).collection('shopping cart').doc(elem.id)
+                        .delete()
+                        .then(() => {
+                            alert(`Se eliminó el producto del carrito`);
+                            getCart();
+                        });
+
+                } else {
+                    alert("debes iniciar sesion");
+                }
+            });
+        });
+
 
         cartContainer.appendChild(newProduct);
     });
@@ -59,24 +79,27 @@ function getCart() {
             // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
 
             usersRef.doc(user.uid).collection('shopping cart')
-            .get()
-            .then((querySnapshot) => {
-                const objects = [];
-                querySnapshot.forEach((doc) => {
-                    const obj = doc.data();
-                    obj.id = doc.id;
-                    total += parseFloat(obj.newPrice);
-                    subtotal += parseFloat(obj.lastPrice);
-                    objects.push(obj);
-                    console.log(`${doc.id} => ${doc.data()}`);
+                .get()
+                .then((querySnapshot) => {
+                    subtotal = 0.00;
+                    total = 0.00;
+                    discount = 0.00;
+                    const objects = [];
+                    querySnapshot.forEach((doc) => {
+                        const obj = doc.data();
+                        obj.id = doc.id;
+                        total += parseFloat(obj.newPrice);
+                        subtotal += parseFloat(obj.lastPrice);
+                        objects.push(obj);
+                        console.log(`${doc.id} => ${doc.data()}`);
+                    });
+                    pSubtotal.innerText = `$${subtotal.toFixed(2)}`;
+                    pTotal.innerText = `$${total.toFixed(2)}`;
+                    pDiscount.innerText = `$${(total - subtotal).toFixed(2)}`;
+
+
+                    renderCart(objects);
                 });
-                pSubtotal.innerText = `$${subtotal.toFixed(2)}`;
-                pTotal.innerText = `$${total.toFixed(2)}`;
-                pDiscount.innerText = `$${(total-subtotal).toFixed(2)}`;
-
-
-                renderCart(objects);
-            });
 
         }
     });
