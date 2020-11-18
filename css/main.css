@@ -1711,6 +1711,13 @@ main .newsletter div .input input {
   padding: 120px;
 }
 
+.product hr {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill;
+  margin: 80px 0px;
+}
+
 .product article {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1849,7 +1856,6 @@ main .newsletter div .input input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 100px;
 }
 
 .product__tags h2 {

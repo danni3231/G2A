@@ -1,8 +1,3 @@
-const profileUsername = document.querySelector(".profile__username");
-const profileEmail = document.querySelector(".profile__email");
-
-//console.log(userinfo);
-
 const upload = document.querySelector(".upload");
 
 var imagePaths = [];
