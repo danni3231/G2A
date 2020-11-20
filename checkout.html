@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>G2A</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
     <link rel="stylesheet" href="./css/main.css">
 </head>
-
 <body>
-
     <main class="auth">
 
         <article>
@@ -18,12 +15,15 @@
                 <img src="./data/elements/logo.png" alt="">
                 <p>SIGN IN TO GET THE LOWEST PRICES! </p>
 
-                <form class="form signIn">
+                <form class="form checkout">
 
-                    <div class="input--form"><input name="email" placeholder="email" type="text"></div>
-                    <div class="input--form"><input name="password" placeholder="password" type="password"></div>
+                    <div class="input--form"><input name="name" placeholder="name" type="Text"></div>
+                    <div class="input--form"><input name="id" placeholder="id" type="number"></div>
+                    <div class="input--form"><input name="cardNumber" placeholder="Credit card" type="number"></div>
+                    <div class="input--form"><input name="expirationDate" placeholder="Expiration Date" type="text"></div>
+                    <div class="input--form"><input name="code" placeholder="Security code" type="number"></div>
 
-                    <div class="btn--form"><button>Sign In</button></div>
+                    <div class="btn--form"><button>Purchase</button></div>
 
                 </form>
 
@@ -33,19 +33,12 @@
                     <hr>
                 </div>
 
-                <div class="auth__btn">
-                    <input type="image" src="./data/networks/google.svg" alt="">
-                    <input type="image" src="./data/networks/twiter.svg" alt="">
-                    <input type="image" src="./data/networks/facebook.svg" alt="">
-                </div>
+                <img src="./data/payment/paypal.png" alt="">
+
             </section>
            
-         
-
-            <section class="auth__bottom">
-                <p>don’t have any account? <a href="./signUp.html"></a>Sign up now</a> </p>
-            </section>
         </article>
+
 
     </main>
 
@@ -54,9 +47,8 @@
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="./scripts/firebase.js"></script>
-    <script src="./scripts/signIn.js"></script>
-
-
+    <script src="./scripts/checkout.js"></script>
+    
 </body>
 
 </html>

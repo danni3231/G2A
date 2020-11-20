@@ -49,7 +49,7 @@ function renderCart(list) {
                     usersRef.doc(user.uid).collection('shopping cart').doc(elem.id)
                         .delete()
                         .then(() => {
-                            alert(`Se eliminó el producto del carrito`);
+                            alert('Se eliminó el producto del carrito');
                             getCart();
                         });
 
@@ -108,3 +108,7 @@ function getCart() {
 // render inicial con la cart
 getCart();
 
+const btnCheckout = document.querySelector('.checkout');
+ btnCheckout.addEventListener('click', () => {
+     window.location.href = 'checkout.html';
+ });

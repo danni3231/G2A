@@ -13,4 +13,5 @@ var firebaseConfig = {
   const db = firebase.firestore();
   const usersRef = db.collection('users');
   const productsRef = db.collection('products');
+  const ordersRef = db.collection('orders');
   var storageRef = firebase.storage().ref();

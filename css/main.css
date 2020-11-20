@@ -1376,6 +1376,7 @@ main .newsletter div .input input {
 }
 
 .auth__form img {
+  max-width: 150px;
   -webkit-filter: invert(1);
           filter: invert(1);
 }
@@ -1565,6 +1566,7 @@ main .newsletter div .input input {
   background-color: transparent;
   border: none;
   overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .filters select:focus {
@@ -1943,6 +1945,7 @@ main .newsletter div .input input {
   border: 1px solid #ffffff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin-bottom: 80px;
 }
 
 .cart .summary div {

@@ -53,7 +53,7 @@ function renderProducts(list) {
                     usersRef.doc(user.uid).collection('shopping cart').doc(elem.id)
                         .set(elem)
                         .then(function () {
-                            console.log("se agrego el juego");
+                            alert("se agrego el juego al carrito");
                         });
 
                 } else {
